@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vismay Shrouty — Portfolio</title>
+  <meta name="description" content="Developer · Strategist · Builder. Personal portfolio of Vismay Shrouty." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif&family=JetBrains+Mono:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ── NAV ───────────────────────────────────── -->
+  <header id="nav">
+    <a href="#" class="nav-wordmark">VS</a>
+    <nav class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ── HERO ──────────────────────────────────── -->
+  <section id="hero" aria-label="Hero">
+    <!-- bottom layer: real photo (revealed on hover) -->
+    <div class="hero-layer hero-real" aria-hidden="true"></div>
+    <!-- top layer: illustration (default, masked on hover) -->
+    <div class="hero-layer hero-illustrated" id="heroIllustrated" aria-hidden="true"></div>
+    <!-- overlay tint for better text readability -->
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-kicker">Vismay Shrouty</p>
+      <h1 class="hero-heading">
+        <span class="hero-line">Developer</span>
+        <span class="hero-line hero-serif">Strategist</span>
+        <span class="hero-line">Builder<span class="hero-dot">.</span></span>
+      </h1>
+      <p class="hero-sub">I build systems, write research, and argue for a living.</p>
+    </div>
+
+    <div class="hero-bottom-bar">
+      <span class="hero-hint">
+        <span class="hero-hint-circle" aria-hidden="true"></span>
+        Hover to reveal
+      </span>
+      <a href="#work" class="hero-scroll" aria-label="Scroll to work">
+        <span>Scroll</span>
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M12 5v14M5 12l7 7 7-7" />
+        </svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ── WORK / PROJECTS ──────────────────────── -->
+  <section id="work">
+    <div class="container">
+      <h2 class="section-label">Selected Work</h2>
+
+      <div class="work-grid">
+
+        <!-- Project 1 -->
+        <a href="#" class="project-card">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-index">01</span>
+              <div class="project-tags">
+                <span>C</span><span>Algorithms</span><span>Research</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">HNSW Implementation</h3>
+              <p class="project-desc">Research report & annotated C implementation of Hierarchical Navigable Small World
+                graphs — the backbone of modern vector search.</p>
+            </div>
+            <div class="project-footer">
+              <span class="project-link">View Research<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <path d="M7 17L17 7M17 7H7M17 7v10" />
+                </svg></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="#" class="project-card">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-index">02</span>
+              <div class="project-tags">
+                <span>Python</span><span>Data Viz</span><span>Space</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Astropolitics Data Pipeline</h3>
+              <p class="project-desc">A real-time data ingestion engine tracking low-earth orbit satellite deployments, analyzing compliance with international airspace treaties and space policy frameworks.</p>
+              <div class="project-stats">
+                <div class="p-stat"><strong>WebSockets</strong> Streaming</div>
+                <div class="p-stat"><strong>PostGIS</strong> Geospatial</div>
+              </div>
+            </div>
+            <div class="project-footer">
+              <span class="project-link">View Pipeline<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <path d="M7 17L17 7M17 7H7M17 7v10" />
+                </svg></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="#" class="project-card">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-index">03</span>
+              <div class="project-tags">
+                <span>C</span><span>Embedded</span><span>Hardware</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Digispark Automator</h3>
+              <p class="project-desc">HID keyboard automation on ATtiny85 — types DSA code patterns with
+                PROGMEM-optimized memory layout.</p>
+            </div>
+            <div class="project-footer">
+              <span class="project-link">View Source<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <path d="M7 17L17 7M17 7H7M17 7v10" />
+                </svg></span>
+            </div>
+          </div>
+        </a>
+
+        <!-- Project 4 -->
+        <a href="#" class="project-card">
+          <div class="project-card-inner">
+            <div class="project-header">
+              <span class="project-index">04</span>
+              <div class="project-tags">
+                <span>NLP</span><span>Diplomacy</span><span>Politics</span>
+              </div>
+            </div>
+            <div class="project-content">
+              <h3 class="project-title">Diplomatic Sentiment Analyzer</h3>
+              <p class="project-desc">An NLP-driven application that parses declassified policy documents and global treaties to map geopolitical shifts, policy sentiment, and international relations.</p>
+            </div>
+            <div class="project-footer">
+              <span class="project-link">View Analysis<svg width="16" height="16" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.5">
+                  <path d="M7 17L17 7M17 7H7M17 7v10" />
+                </svg></span>
+            </div>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── ABOUT ─────────────────────────────────── -->
+  <section id="about">
+    <div class="container about-grid">
+      <div class="about-left">
+        <h2 class="section-label">About</h2>
+        <p class="about-lead">A developer who thinks like a strategist and argues like a diplomat.</p>
+        <p class="about-body">I'm pursuing Computer Science with a deep passion for the intersection of technology, international diplomacy, political strategy, and space exploration. I build systems that process geopolitical data, track astropolitical movements, and model complex global policies.</p>
+        <p class="about-body">Whether I'm writing system-level code or analyzing diplomatic frameworks, I believe the best solutions — like the best arguments — are precise, elegant, and incredibly robust.</p>
+      </div>
+      <div class="about-right">
+        <div class="about-block">
+          <h4 class="about-block-label">Languages</h4>
+          <div class="about-pills">
+            <span>C</span><span>Python</span><span>JavaScript</span><span>HTML / CSS</span>
+          </div>
+        </div>
+        <div class="about-block">
+          <h4 class="about-block-label">Domains</h4>
+          <div class="about-pills">
+            <span>Systems Architecture</span><span>Space Tech</span><span>Embedded Systems</span><span>Web
+              Dev</span><span>Political Data</span><span>Deep Tech</span>
+          </div>
+        </div>
+        <div class="about-block">
+          <h4 class="about-block-label">Beyond Code</h4>
+          <div class="about-pills">
+            <span>Diplomacy / Policy</span><span>Geopolitics</span><span>Astropolitics</span><span>Public Speaking</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ───────────────────────────────── -->
+  <section id="contact">
+    <div class="container contact-inner">
+      <h2 class="section-label">Get in Touch</h2>
+      <p class="contact-lead">Whether you're looking to build something ambitious, discuss astropolitics, or grab a coffee — I'm open to conversations.</p>
+      
+      <div class="contact-grid">
+        <a href="mailto:hello@vismay.com" class="contact-box" id="contact-email">
+          <span class="cb-label">Email</span>
+          <span class="cb-value">Reach Out <span class="cb-arrow">↗</span></span>
+        </a>
+        <a href="https://github.com/codebreaker77" target="_blank" class="contact-box" id="contact-github">
+          <span class="cb-label">GitHub</span>
+          <span class="cb-value">codebreaker77 <span class="cb-arrow">↗</span></span>
+        </a>
+        <a href="https://www.linkedin.com/in/vismay-shrouty-71678a2a8/" target="_blank" class="contact-box" id="contact-linkedin">
+          <span class="cb-label">LinkedIn</span>
+          <span class="cb-value">Connect <span class="cb-arrow">↗</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ────────────────────────────────── -->
+  <footer id="footer">
+    <div class="container footer-inner">
+      <span>© 2026 Vismay Shrouty</span>
+      <span>Built with obsession.</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
