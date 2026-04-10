@@ -189,3 +189,44 @@ document.querySelectorAll('.project-card').forEach(card => {
     card.style.setProperty('--mouse-y', `${y}px`);
   });
 });
+
+/* ═══════════════════════════════════════════════════════════
+   TERMINAL CONTACT FORM — Fakes sending
+═══════════════════════════════════════════════════════════ */
+(function() {
+  const form = document.querySelector('.term-form');
+  if (!form) return;
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    // Disable inputs
+    const inputs = form.querySelectorAll('.term-input, .term-btn-submit');
+    inputs.forEach(input => input.disabled = true);
+    
+    // Update button
+    const submitBtn = form.querySelector('.term-btn-submit');
+    submitBtn.textContent = './send_message --executing';
+    submitBtn.style.color = '#ffbd2e';
+
+    // Output line
+    const outputLine = document.createElement('div');
+    outputLine.className = 'term-line mt-1';
+    outputLine.style.color = '#ffbd2e';
+    form.parentNode.appendChild(outputLine);
+
+    let dots = 0;
+    const dotInterval = setInterval(() => {
+      dots = (dots + 1) % 4;
+      outputLine.innerHTML = `<span class="term-prompt">vismay@portfolio:~$</span> Transmitting payload${'.'.repeat(dots)}`;
+    }, 400);
+
+    setTimeout(() => {
+      clearInterval(dotInterval);
+      outputLine.style.color = '#27c93f';
+      outputLine.innerHTML = `<span class="term-prompt">vismay@portfolio:~$</span> [ OK ] Message transmitted securely.`;
+      submitBtn.textContent = './send_message --done';
+      submitBtn.style.color = 'var(--dim)';
+    }, 2000);
+  });
+})();
