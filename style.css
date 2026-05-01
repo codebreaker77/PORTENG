@@ -126,8 +126,7 @@ section {
   z-index: 1;
   background-image: url('real-portrait.png');
   background-size: cover;
-  /* Nudge right+down to align face with illustration */
-  background-position: calc(50% + 30px) calc(15% + 15px);
+  background-position: calc(50% + 20px) calc(15% + 35px);
   filter: contrast(1.1) saturate(1.2);
 }
 
@@ -704,6 +703,14 @@ section {
 /* ═══════════════════════════════════════════════════
    RESPONSIVE
 ═══════════════════════════════════════════════════ */
+
+/* Desktop — nudge real portrait to align with illustration at larger viewports */
+@media (min-width: 861px) {
+  .hero-real {
+    background-position: calc(50% + 25px) calc(15% + 42px);
+  }
+}
+
 @media (max-width: 860px) {
   .hero-content { padding: 0 2rem 9rem; }
   .hero-bottom-bar { left: 2rem; right: 2rem; }
